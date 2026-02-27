@@ -1,0 +1,37 @@
+# كود تسجيل المواعيد الالي
+import pandas as pd
+import numpy as np
+from datetime import datetime, timedelta
+from sklearn.ensemble import RandomForestClassifier
+
+data = {
+    "Age": [25, 60, 45, 30, 70],
+    "Disease": ["Flu", "Heart Disease", "Diabetes", "Flu", "Heart Disease"],
+    "Disease_Severity": [2, 5, 4, 2, 5],
+    "Priority": ["Low", "High", "Medium", "Low", "High"]
+}
+
+df = pd.DataFrame(data)
+
+print("Dataset Ready!")
+
+X = df[["Age", "Disease_Severity"]]
+y = df["Priority"]
+
+model = RandomForestClassifier()
+model.fit(X, y)
+
+print("Model Trained!")
+
+name = input("Enter Patient Name: ")
+age = int(input("Enter Age: "))
+severity = int(input("Enter Disease Severity (1-5): "))
+
+new_patient = [[age, severity]]
+
+predicted_priority = model.predict(new_patient)[0]
+
+appointment_time = datetime.now().strftime("%Y-%m-%d %H:%M")
+
+print("Priority:", predicted_priority)
+print("Appointment Time:", appointment_time)
