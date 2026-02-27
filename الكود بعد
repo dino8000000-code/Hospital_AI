@@ -1,0 +1,150 @@
+# الربط مع قوقل درايف
+from google.colab import drive
+drive.mount('/content/drive')
+
+#اضافة المكتبات
+import pandas as pd
+import numpy as np
+from datetime import datetime, timedelta
+from IPython.display import display
+
+from sklearn.model_selection import train_test_split
+from sklearn.compose import ColumnTransformer
+from sklearn.preprocessing import OneHotEncoder
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.pipeline import Pipeline
+
+#تحميل الداتا من قوقل درايف
+file_path = "/content/drive/MyDrive/smart_hospital_training_dataset.csv"
+df = pd.read_csv(file_path)
+
+print("Dataset Loaded Successfully!")
+display(df.head())
+
+#تجهيز البيانات
+X = df[["Age", "Disease", "Disease_Severity"]]
+y = df["Priority"]
+
+categorical_features = ["Disease"]
+numeric_features = ["Age", "Disease_Severity"]
+
+ct = ColumnTransformer([
+    ("encoder", OneHotEncoder(handle_unknown="ignore"), categorical_features)
+], remainder="passthrough")
+
+model = RandomForestClassifier()
+
+pipeline = Pipeline([
+    ("preprocessor", ct),
+    ("classifier", model)
+])
+
+# تدريب النموذج
+pipeline.fit(X, y)
+
+print("Model Trained Successfully!")
+
+# استدعاء و تجهيز قائمة الامراض
+diseases = df["Disease"].unique().tolist()
+
+# صناعة جدول المواعيد
+appointments_file = "/content/drive/MyDrive/appointments.csv"
+
+try:
+    appointments = pd.read_csv(appointments_file)
+except:
+    appointments = pd.DataFrame(columns=[
+        "Patient_Name",
+        "Age",
+        "Disease",
+        "Predicted_Priority",
+        "Appointment_Time"
+    ])
+
+# تجهيز الاسالة و الاجوبة المحددة
+while True:
+
+    answer = input("Do you want to enter a new patient? (yes/no): ").lower().strip()
+
+    if answer == "no":
+        print("Program finished.")
+        break
+    elif answer != "yes":
+        print("Please enter yes or no.")
+        continue
+
+    print("\n=========== New Patient ===========")
+
+    # كود للتحقق من صحة الاسم و عدم وجود اي اخطاء
+    while True:
+        name = input("Enter Patient Name: ")
+        if name.replace(" ", "").isalpha():
+            break
+        else:
+            print("Name must contain letters only.")
+
+    # كود للتحقق من صحة العمر الذي ادخلة المستخدم
+    while True:
+        age_input = input("Enter Patient Age: ")
+        if age_input.isdigit():
+            age = int(age_input)
+            break
+        else:
+            print("Age must contain numbers only.")
+
+    # اضهار قائمة الامراض
+    print("\nAvailable Diseases:")
+    for d in diseases:
+        print("-", d)
+
+    # التحقق من ادخال اسم المرض اذا كان موجود
+    disease = input("Enter disease exactly as shown: ")
+    while disease not in diseases:
+        print("Invalid disease.")
+        disease = input("Enter disease again: ")
+
+    severity = df[df["Disease"] == disease]["Disease_Severity"].iloc[0]
+
+    # اعداد بيانات التنبؤ
+    new_patient = pd.DataFrame(
+        [[age, disease, severity]],
+        columns=["Age", "Disease", "Disease_Severity"]
+    )
+
+    predicted_priority = pipeline.predict(new_patient)[0]
+
+    # كود يحدد الموعد حسب الاولوية
+    if appointments.empty:
+        appointment_time = datetime.now()
+    else:
+        last_time = datetime.strptime(
+            appointments.iloc[-1]["Appointment_Time"],
+            "%Y-%m-%d %H:%M"
+        )
+        appointment_time = last_time + timedelta(hours=2)
+
+    appointment_time_str = appointment_time.strftime("%Y-%m-%d %H:%M")
+
+    # لاضافة بيانات مريض اخر
+    new_record = {
+        "Patient_Name": name,
+        "Age": age,
+        "Disease": disease,
+        "Predicted_Priority": predicted_priority,
+        "Appointment_Time": appointment_time_str
+    }
+
+    appointments = pd.concat(
+        [appointments, pd.DataFrame([new_record])],
+        ignore_index=True
+    )
+
+    # كود يحفظ البيانات يدوياً على قوقل درايف
+    appointments.to_csv(appointments_file, index=False)
+
+    # اضهار النتيجة
+    print("\nAppointment Scheduled Successfully!")
+    print("Predicted Priority:", predicted_priority)
+    print("Appointment Time:", appointment_time_str)
+    print("\nCurrent Appointments Table:")
+    display(appointments)
