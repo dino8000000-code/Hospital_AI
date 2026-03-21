@@ -1,0 +1,211 @@
+Age,Disease,Disease_Severity,Age_Risk,Final_Risk_Score,Priority
+82,Heart Attack,5,5,15,1
+76,Stroke,5,5,15,1
+69,Cancer,4,4,12,2
+88,Sepsis,5,5,15,1
+72,Kidney Failure,4,4,12,2
+65,Pulmonary Embolism,4,4,12,2
+90,Brain Hemorrhage,5,5,15,1
+58,Pneumonia,3,3,9,2
+47,Diabetes,3,3,9,2
+34,Asthma,3,2,8,3
+25,Flu,1,2,4,3
+19,Cold,1,2,4,3
+54,Hypertension,3,3,9,2
+77,Liver Failure,4,5,13,1
+83,Severe Trauma,5,5,15,1
+60,Appendicitis,3,3,9,2
+44,Migraine,2,3,7,3
+39,Fracture,2,2,6,3
+73,Meningitis,4,4,12,2
+81,Sepsis,5,5,15,1
+67,Cancer,4,4,12,2
+52,Diabetes,3,3,9,2
+29,Allergy,1,2,4,3
+31,Ulcer,2,2,6,3
+78,Heart Attack,5,5,15,1
+85,Stroke,5,5,15,1
+62,Pneumonia,3,4,10,2
+70,Kidney Failure,4,4,12,2
+48,Asthma,3,3,9,2
+22,Cold,1,2,4,3
+14,Food Poisoning,1,2,4,3
+56,Hypertension,3,3,9,2
+63,Liver Failure,4,4,12,2
+74,Cancer,4,4,12,2
+91,Brain Hemorrhage,5,5,15,1
+59,Appendicitis,3,3,9,2
+45,Fracture,2,3,7,3
+36,Migraine,2,2,6,3
+27,Skin Infection,1,2,4,3
+18,Ear Infection,1,2,4,3
+80,Severe Trauma,5,5,15,1
+84,Sepsis,5,5,15,1
+66,Pulmonary Embolism,4,4,12,2
+71,Meningitis,4,4,12,2
+53,Diabetes,3,3,9,2
+41,Hypertension,3,3,9,2
+38,Thyroid Disorder,2,2,6,3
+33,Ulcer,2,2,6,3
+21,Flu,1,2,4,3
+17,Cold,1,2,4,3
+79,Heart Attack,5,5,15,1
+86,Stroke,5,5,15,1
+68,Cancer,4,4,12,2
+75,Kidney Failure,4,4,12,2
+64,Liver Failure,4,4,12,2
+57,Pneumonia,3,3,9,2
+49,Asthma,3,3,9,2
+42,Diabetes,3,3,9,2
+35,Fracture,2,2,6,3
+28,Allergy,1,2,4,3
+23,Skin Infection,1,2,4,3
+16,Ear Infection,1,2,4,3
+87,Brain Hemorrhage,5,5,15,1
+92,Sepsis,5,5,15,1
+61,Pulmonary Embolism,4,4,12,2
+55,Hypertension,3,3,9,2
+46,Migraine,2,3,7,3
+32,Ulcer,2,2,6,3
+24,Cold,1,2,4,3
+20,Flu,1,2,4,3
+83,Heart Attack,5,5,15,1
+77,Stroke,5,5,15,1
+70,Cancer,4,4,12,2
+89,Sepsis,5,5,15,1
+74,Kidney Failure,4,4,12,2
+66,Pulmonary Embolism,4,4,12,2
+91,Brain Hemorrhage,5,5,15,1
+59,Pneumonia,3,3,9,2
+50,Diabetes,3,3,9,2
+36,Asthma,3,2,8,3
+27,Flu,1,2,4,3
+21,Cold,1,2,4,3
+56,Hypertension,3,3,9,2
+79,Liver Failure,4,5,13,1
+85,Severe Trauma,5,5,15,1
+62,Appendicitis,3,3,9,2
+46,Migraine,2,3,7,3
+41,Fracture,2,2,6,3
+75,Meningitis,4,4,12,2
+82,Sepsis,5,5,15,1
+68,Cancer,4,4,12,2
+54,Diabetes,3,3,9,2
+31,Allergy,1,2,4,3
+33,Ulcer,2,2,6,3
+80,Heart Attack,5,5,15,1
+87,Stroke,5,5,15,1
+64,Pneumonia,3,4,10,2
+72,Kidney Failure,4,4,12,2
+49,Asthma,3,3,9,2
+24,Cold,1,2,4,3
+16,Food Poisoning,1,2,4,3
+58,Hypertension,3,3,9,2
+65,Liver Failure,4,4,12,2
+76,Cancer,4,4,12,2
+92,Brain Hemorrhage,5,5,15,1
+61,Appendicitis,3,3,9,2
+47,Fracture,2,3,7,3
+38,Migraine,2,2,6,3
+29,Skin Infection,1,2,4,3
+19,Ear Infection,1,2,4,3
+81,Severe Trauma,5,5,15,1
+85,Sepsis,5,5,15,1
+67,Pulmonary Embolism,4,4,12,2
+73,Meningitis,4,4,12,2
+55,Diabetes,3,3,9,2
+43,Hypertension,3,3,9,2
+40,Thyroid Disorder,2,2,6,3
+35,Ulcer,2,2,6,3
+23,Flu,1,2,4,3
+18,Cold,1,2,4,3
+78,Heart Attack,5,5,15,1
+88,Stroke,5,5,15,1
+69,Cancer,4,4,12,2
+76,Kidney Failure,4,4,12,2
+65,Liver Failure,4,4,12,2
+58,Pneumonia,3,3,9,2
+51,Asthma,3,3,9,2
+44,Diabetes,3,3,9,2
+37,Fracture,2,2,6,3
+30,Allergy,1,2,4,3
+25,Skin Infection,1,2,4,3
+17,Ear Infection,1,2,4,3
+89,Brain Hemorrhage,5,5,15,1
+93,Sepsis,5,5,15,1
+63,Pulmonary Embolism,4,4,12,2
+57,Hypertension,3,3,9,2
+48,Migraine,2,3,7,3
+34,Ulcer,2,2,6,3
+26,Cold,1,2,4,3
+22,Flu,1,2,4,3
+84,Heart Attack,5,5,15,1
+78,Stroke,5,5,15,1
+71,Cancer,4,4,12,2
+90,Sepsis,5,5,15,1
+75,Kidney Failure,4,4,12,2
+67,Pulmonary Embolism,4,4,12,2
+92,Brain Hemorrhage,5,5,15,1
+60,Pneumonia,3,3,9,2
+51,Diabetes,3,3,9,2
+37,Asthma,3,2,8,3
+28,Flu,1,2,4,3
+22,Cold,1,2,4,3
+57,Hypertension,3,3,9,2
+80,Liver Failure,4,5,13,1
+86,Severe Trauma,5,5,15,1
+63,Appendicitis,3,3,9,2
+47,Migraine,2,3,7,3
+42,Fracture,2,2,6,3
+76,Meningitis,4,4,12,2
+83,Sepsis,5,5,15,1
+69,Cancer,4,4,12,2
+55,Diabetes,3,3,9,2
+32,Allergy,1,2,4,3
+34,Ulcer,2,2,6,3
+81,Heart Attack,5,5,15,1
+88,Stroke,5,5,15,1
+65,Pneumonia,3,4,10,2
+73,Kidney Failure,4,4,12,2
+50,Asthma,3,3,9,2
+25,Cold,1,2,4,3
+17,Food Poisoning,1,2,4,3
+59,Hypertension,3,3,9,2
+66,Liver Failure,4,4,12,2
+77,Cancer,4,4,12,2
+93,Brain Hemorrhage,5,5,15,1
+62,Appendicitis,3,3,9,2
+48,Fracture,2,3,7,3
+39,Migraine,2,2,6,3
+30,Skin Infection,1,2,4,3
+20,Ear Infection,1,2,4,3
+82,Severe Trauma,5,5,15,1
+86,Sepsis,5,5,15,1
+68,Pulmonary Embolism,4,4,12,2
+74,Meningitis,4,4,12,2
+56,Diabetes,3,3,9,2
+44,Hypertension,3,3,9,2
+41,Thyroid Disorder,2,2,6,3
+36,Ulcer,2,2,6,3
+24,Flu,1,2,4,3
+19,Cold,1,2,4,3
+79,Heart Attack,5,5,15,1
+89,Stroke,5,5,15,1
+70,Cancer,4,4,12,2
+77,Kidney Failure,4,4,12,2
+66,Liver Failure,4,4,12,2
+59,Pneumonia,3,3,9,2
+52,Asthma,3,3,9,2
+45,Diabetes,3,3,9,2
+38,Fracture,2,2,6,3
+31,Allergy,1,2,4,3
+26,Skin Infection,1,2,4,3
+18,Ear Infection,1,2,4,3
+90,Brain Hemorrhage,5,5,15,1
+94,Sepsis,5,5,15,1
+64,Pulmonary Embolism,4,4,12,2
+58,Hypertension,3,3,9,2
+49,Migraine,2,3,7,3
+35,Ulcer,2,2,6,3
+27,Cold,1,2,4,3
+23,Flu,1,2,4,3
